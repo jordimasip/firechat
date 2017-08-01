@@ -4,9 +4,9 @@
 <div id="app-mensajes" class="app-mensajes">
 
   <div *ngFor="let chat of _cs.chats | async"
-        [ngClass]="{'text-right': _cs.usuario.nombre==chat.nombre}">
-    <span [ngClass]="{'badge-primary': _cs.usuario.nombre==chat.nombre,
-                      'badge-success': _cs.usuario.nombre!=chat.nombre}"
+        [ngClass]="{'text-right': _cs.usuario.uid==chat.uid}">
+    <span [ngClass]="{'badge-primary': _cs.usuario.uid==chat.uid,
+                      'badge-success': _cs.usuario.uid!=chat.uid}"
           class="badge">
           {{ chat.nombre }}
     </span>
